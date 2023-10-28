@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": ["user_id", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "user_id": {
+      "type": "integer",
+      "default": "",
+      "title": "The user_id Schema",
+      "examples": [1]
+    },
+    "name": {
+      "type": "string",
+      "default": "",
+      "title": "The name Schema",
+      "examples": ["Rain Garden"]
+    },
+    "grid": {
+      "type": "json",
+      "default": "",
+      "title": "The grid Schema",
+      "examples": [
+        {
+          "dimensions": {
+            "height": 1,
+            "width": 1
+          },
+          "rows": {
+            "1": {
+              "row": 1,
+              "cells": {
+                "1": {
+                  "plant_id": "undefined",
+                  "row": 1,
+                  "column": 1
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "user_id": 1,
+      "name": "Rain Garden",
+      "grid": {
+        "dimensions": {
+          "height": 1,
+          "width": 1
+        },
+        "rows": {
+          "1": {
+            "row": 1,
+            "cells": {
+              "1": {
+                "plant_id": "undefined",
+                "row": 1,
+                "column": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

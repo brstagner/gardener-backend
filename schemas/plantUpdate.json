@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [],
+  "additionalProperties": false,
+  "properties": {
+    "common_name": {
+      "type": "string",
+      "default": "",
+      "title": "The common_nameSchema",
+      "examples": ["Oxeye Sunflower"]
+    },
+    "scientific_name": {
+      "type": "string",
+      "default": "",
+      "title": "The scientific_name Schema",
+      "examples": ["Heliopsis helianthoides"]
+    },
+    "bloom_color": {
+      "type": "json",
+      "default": "",
+      "title": "The bloom_color Schema",
+      "examples": [{ "one": "orange", "two": "yellow", "three": null }]
+    },
+    "bloom_months": {
+      "type": "json",
+      "default": "",
+      "title": "The bloom_months Schema",
+      "examples": [
+        {
+          "jan": false,
+          "feb": false,
+          "mar": false,
+          "apr": false,
+          "may": false,
+          "jun": true,
+          "jul": true,
+          "aug": true,
+          "sep": false,
+          "oct": false,
+          "nov": false,
+          "dec": false
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "user_id": 1,
+      "common_name": "Oxeye Sunflower",
+      "scientific_name": "Heliopsis helianthoides",
+      "bloom_color": { "one": "orange", "two": "yellow", "three": null },
+      "bloom_months": {
+        "jan": false,
+        "feb": false,
+        "mar": false,
+        "apr": false,
+        "may": false,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": false,
+        "oct": false,
+        "nov": false,
+        "dec": false
+      }
+    }
+  ]
+}
